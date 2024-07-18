@@ -14,18 +14,20 @@ import {
   DialogContent,
   DialogDescription,
   DialogHeader,
-  DialogTitle,
-  DialogTrigger,
 } from "@/components/ui/dialog";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 import { FcGoogle } from "react-icons/fc";
 import { useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
+import { doc, setDoc } from "firebase/firestore";
+import { db } from "@/service/firebaseConfig";
 
 function CreateTip() {
   const [place, setPlace] = useState();
   const [formData, setFormata] = useState([]);
   const [openDialog, setOpenDialog] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleInputChange = (name, value) => {
     if (name == "noOfDays" && value > 5) {
@@ -83,6 +85,7 @@ function CreateTip() {
       return;
     }
 
+    setLoading(true);
     const FINAL_PROMPT = AI_PROMPT.replace(
       "{location}",
       formData?.location?.label
@@ -92,11 +95,27 @@ function CreateTip() {
       .replace("{budget}", formData?.budget)
       .replace("{totalDays}", formData?.noOfDays);
 
-    console.log(FINAL_PROMPT);
+    // console.log(FINAL_PROMPT);
 
     const result = await chatSession.sendMessage(FINAL_PROMPT);
 
     console.log(result?.response?.text());
+    setLoading(false);
+    SaveAiTrip(result?.response?.text());
+  };
+
+  const SaveAiTrip = async (TripData) => {
+    setLoading(true);
+    // Add a new document in collection "cities"
+    const user = JSON.parse(localStorage.getItem("user"));
+    const docId = Date.now().toString();
+    await setDoc(doc(db, "AITrips", docId), {
+      userSelection: formData,
+      tripData: JSON.parse(TripData),
+      userEmail: user?.email,
+      id: docId,
+    });
+    setLoading(false);
   };
 
   return (
@@ -183,7 +202,13 @@ function CreateTip() {
       </div>
 
       <div className="my-10 flex justify-end">
-        <Button onClick={OnGenerateTrip}>Generate Trip With AI</Button>
+        <Button onClick={OnGenerateTrip} disabled={loading}>
+          {loading ? (
+            <AiOutlineLoading3Quarters className="h-7 w-7 animate-spin" />
+          ) : (
+            "Generate Trip With AI"
+          )}
+        </Button>
       </div>
 
       <Dialog open={openDialog}>
