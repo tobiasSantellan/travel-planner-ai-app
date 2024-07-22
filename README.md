@@ -1,4 +1,4 @@
-## Travel Planner AI App
+# Travel Planner AI App
 ## Overview
 The Travel Planner AI App is designed to simplify and enhance your travel planning experience. Utilizing AI, Firebase, and ShadCN, the app offers personalized travel recommendations, including hotel suggestions, itineraries, and points of interest.
 
