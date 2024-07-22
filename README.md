@@ -37,7 +37,7 @@ cd travel-planner-ai-app
 ## 3. Set Up Environment Variables:
 * Create a .env file in the root directory and add your Google API key and Firebase configuration:
   <pre>
-    VITE_GOOGLE_PLACE_API_KEY=your_google_api_key_here
+VITE_GOOGLE_PLACE_API_KEY=your_google_api_key_here
 VITE_FIREBASE_API_KEY=your_firebase_api_key_here
 VITE_FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain_here
 VITE_FIREBASE_DATABASE_URL=your_firebase_database_url_here
