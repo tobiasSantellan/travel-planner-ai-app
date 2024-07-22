@@ -48,11 +48,11 @@ VITE_FIREBASE_APP_ID=your_firebase_app_id_here
 
 4. Start the Development Server:
 
-npm run dev
+* npm run dev
 
 5. Build for Production:
 
-npm run build
+* npm run build
 
 ## Firebase Configuration
 1. Create a Firebase Project:
