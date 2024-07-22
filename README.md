@@ -27,15 +27,15 @@ The Travel Planner AI App is designed to simplify and enhance your travel planni
 ## Installation
 1. Clone the Repository:
 
-git clone https://github.com/tobiasSantellan/travel-planner-ai-app.git
-cd travel-planner-ai-app
+* git clone https://github.com/tobiasSantellan/travel-planner-ai-app.git
+* cd travel-planner-ai-app
 
 2. Install Dependencies:
 
-npm install
+* npm install
 
 3. Set Up Environment Variables:
-Create a .env file in the root directory and add your Google API key and Firebase configuration:
+* Create a .env file in the root directory and add your Google API key and Firebase configuration:
 
 VITE_GOOGLE_PLACE_API_KEY=your_google_api_key_here
 VITE_FIREBASE_API_KEY=your_firebase_api_key_here
