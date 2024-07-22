@@ -53,7 +53,7 @@ VITE_FIREBASE_APP_ID=your_firebase_app_id_here
 
 ## 5. Build for Production:
 
-`` npm run build
+`` bash npm run build
 
 ## Firebase Configuration
 ## 1. Create a Firebase Project:
