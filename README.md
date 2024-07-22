@@ -27,34 +27,49 @@ The Travel Planner AI App is designed to simplify and enhance your travel planni
 ## Installation
 ## 1. Clone the Repository:
 
-* git clone https://github.com/tobiasSantellan/travel-planner-ai-app.git
-* cd travel-planner-ai-app
+<pre>git clone https://github.com/tobiasSantellan/travel-planner-ai-app.git</pre> 
+<pre> cd travel-planner-ai-app</pre>
 
 ## 2. Install Dependencies:
 
-* npm install
+<pre> npm install<pre>
 
 ## 3. Set Up Environment Variables:
 * Create a .env file in the root directory and add your Google API key and Firebase configuration:
   <pre>
     VITE_GOOGLE_PLACE_API_KEY=your_google_api_key_here
-VITE_FIREBASE_API_KEY=your_firebase_api_key_here
-VITE_FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain_here
-VITE_FIREBASE_DATABASE_URL=your_firebase_database_url_here
-VITE_FIREBASE_PROJECT_ID=your_firebase_project_id_here
-VITE_FIREBASE_STORAGE_BUCKET=your_firebase_storage_bucket_here
-VITE_FIREBASE_MESSAGING_SENDER_ID=your_firebase_messaging_sender_id_here
-VITE_FIREBASE_APP_ID=your_firebase_app_id_here
-  </pre>
+    </pre>
+    <pre>
+      VITE_FIREBASE_API_KEY=your_firebase_api_key_here
+    </pre>
+    <pre>
+      VITE_FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain_here
+    </pre>
+    <pre>
+      VITE_FIREBASE_DATABASE_URL=your_firebase_database_url_here
+    </pre>
+    <pre>
+      VITE_FIREBASE_PROJECT_ID=your_firebase_project_id_here
+    </pre>
+    <pre>
+      VITE_FIREBASE_STORAGE_BUCKET=your_firebase_storage_bucket_here
+    </pre>
+    <pre>
+      VITE_FIREBASE_MESSAGING_SENDER_ID=your_firebase_messaging_sender_id_here
+    </pre>
+    <pre>
+      VITE_FIREBASE_APP_ID=your_firebase_app_id_here
+    </pre>
+
 
 
 ## 4. Start the Development Server:
 
-* npm run dev
+<pre> npm run dev </pre>
 
 ## 5. Build for Production:
 
-* npm run build
+<pre> npm run build</pre>
 
 ## Firebase Configuration
 ## 1. Create a Firebase Project:
