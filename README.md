@@ -53,7 +53,7 @@ VITE_FIREBASE_APP_ID=your_firebase_app_id_here</pre>
 
 `npm run build`
 
-## Firebase Configuration
+# Firebase Configuration
 ## 1. Create a Firebase Project:
 
 * Go to the Firebase Console.
